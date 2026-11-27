@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cardápio do Restaurante — IFRJ Campus Pinheiral</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── NAVBAR ─────────────────────────────── -->
+  <nav>
+    <a href="index.html" class="active">Cardápio</a>
+    <a href="comentarios.html">Comentários</a>
+    <a href="formularios.html">Restrições</a>
+    <a href="contato.html">Contato</a>
+    <a href="login.html">Login</a>
+    <a href="sair.html" class="sair">Sair</a>
+  </nav>
+
+  <!-- ── CONTEÚDO PRINCIPAL ─────────────────── -->
+  <main class="container">
+
+    <div class="page-header">
+      <h1>Cardápio da Semana do Restaurante</h1>
+      <p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p>
+    </div>
+    <!-- carrossel -->
+     <div id="meuCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                    <!--
+                        Essa div contém os botões de controle do carousel, por isso recebe a classe "carousel-indicators". Os botões tem a forma de traços semi-transparentes, e cada um deles é associado a uma imagem do carousel
+                        1) atributo data-bs-target="#meuCarousel": associa botao à <div> que contém o carousel
+                        2) atributo data-bs-slide-to: associa um botão a uma imagem, da mesma forma que ocorre em um vetor    
+                        3) classe "active": indica qual botão será destacado quando a página for carregada                
+                    -->
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="0" class="active"></button>
+                        <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="2"></button>
+                        <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="3"></button>
+                        <button type="button" data-bs-target="#meuCarousel" data-bs-slide-to="4"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" data-bs-interval="2000">
+                            <label for="">SEGUNDA-FEIRA</label>
+                            <img src="img/car1.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <label for="">TERÇA-FEIRA</label>
+                            <img src="img/car2.png" class="d-block w-100"> 
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <label for="">QUARTA-FEIRA</label>
+                            <img src="img/car3.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <label for="">QUINTA-FEIRA</label>
+                            <img src="img/car4.png" class="d-block w-100">
+                        </div>
+                        <div class="carousel-item" data-bs-interval="2000">
+                            <label for="">SEXTA-FEIRA</label>
+                            <img src="img/car5.png" class="d-block w-100">
+                        </div>
+                    </div> <!-- fim da div id="carousel-inner" -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#meuCarousel" data-bs-slide="prev"> 
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+
+                    <button class="carousel-control-next" type="button" data-bs-target="#meuCarousel" data-bs-slide="next"> 
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+
+     </div>
+    <!-- ── GRADE DE DIAS ─────────────────────
+         TODO: substituir os dados estáticos abaixo por uma
+         requisição ao banco de dados (ex: fetch('/api/cardapio'))
+         e popular os cards dinamicamente com JavaScript.
+    ─────────────────────────────────────────── -->
+    <section class="cardapio-grid" id="cardapio-grid">
+
+      <!-- SEGUNDA-FEIRA -->
+      <article class="card-dia">
+        <div class="dia-header">Segunda-feira</div>
+        <ul class="pratos-lista">
+          <!-- TODO: cada <li> receberá data-ingredientes="..." do banco -->
+          <li>Arroz com Feijão</li>
+          <li>Bife à Milanesa</li>
+          <li>Batata Frita</li>
+          <li>Salada de Alface</li>
+          <li>Refresco de Manga</li>
+        </ul>
+        <div class="sobremesa">Sobremesa: Fruta da época</div>
+        <div class="check">
+        <label for="">Tenho Interesse:</label>
+        
+        <input type="checkbox">
+        </div>
+      </article>
+
+      <!-- TERÇA-FEIRA -->
+      <article class="card-dia">
+        <div class="dia-header">Terça-feira</div>
+        <ul class="pratos-lista">
+          <li>Arroz com Feijão</li>
+          <li>Carne de Panela</li>
+          <li>Farofa</li>
+          <li>Batata Doce</li>
+          <li>Refresco de Uva</li>
+        </ul>
+        <div class="sobremesa">Sobremesa: Fruta da época</div>
+        <div class="check">
+        <label for="">Tenho Interesse:</label>
+        
+        <input type="checkbox">
+        </div>
+      </article>
+
+      <!-- QUARTA-FEIRA -->
+      <article class="card-dia">
+        <div class="dia-header">Quarta-feira</div>
+        <ul class="pratos-lista">
+          <li>Arroz com Feijão</li>
+          <li>Lasanha</li>
+          <li>Purê</li>
+          <li>Lasanha Vegana</li>
+          <li>Refresco de Caju</li>
+        </ul>
+        <div class="sobremesa">Sobremesa: Fruta da época</div>
+        <div class="check">
+        <label for="">Tenho Interesse:</label>
+        
+        <input type="checkbox">
+        </div>
+      </article>
+
+      <!-- QUINTA-FEIRA -->
+      <article class="card-dia">
+        <div class="dia-header">Quinta-feira</div>
+        <ul class="pratos-lista">
+          <li>Arroz</li>
+          <li>Estrogonofe</li>
+          <li>Batata Palha</li>
+          <li>Lentilha</li>
+          <li>Refresco de Goiaba</li>
+        </ul>
+        <div class="sobremesa">Sobremesa: Fruta da época</div>
+        <div class="check">
+        <label for="">Tenho Interesse:</label>
+        
+        <input type="checkbox">
+        </div>
+      </article>
+
+      <!-- SEXTA-FEIRA -->
+      <article class="card-dia">
+        <div class="dia-header">Sexta-feira</div>
+        <ul class="pratos-lista">
+          <li>Arroz com Feijão</li>
+          <li>Chinelão</li>
+          <li>Cenoura Ralada</li>
+          <li>Carne de Soja</li>
+          <li>Refresco de Maracujá</li>
+        </ul>
+        <div class="sobremesa">Sobremesa: Fruta da época</div>
+        <div>
+        <label for="">Tenho Interesse:</label>
+        
+        <input type="checkbox">
+        </div>
+      </article>
+
+    </section>
+    <!-- fim #cardapio-grid -->
+     <div class="quadroavisos">
+      <h1>Avisos da Semana</h1>
+      <section class="avisos-grid">
+      <article class="aviso-card">
+        <p>Hoje não teremos Suco.</p>
+      </article>
+      <article class="aviso-card">
+        <p>Hoje não teremos Suco.</p>
+      </article>
+      </section>
+    </div>
+     
+  </main>
+
+  <!-- ── SCRIPT PLACEHOLDER ─────────────────
+       Futura integração com banco de dados.
+       Exemplo de como será feito:
+
+       fetch('/api/cardapio/semana')
+         .then(res => res.json())
+         .then(dados => renderizarCardapio(dados));
+
+       function renderizarCardapio(dados) {
+         const grid = document.getElementById('cardapio-grid');
+         grid.innerHTML = '';
+         dados.forEach(dia => {
+           // montar card com dia.nome, dia.pratos, dia.sobremesa
+         });
+       }
+  ──────────────────────────────────────── -->
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

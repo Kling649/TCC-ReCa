@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cardápio — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="publica">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Cardápio da semana</h1>
+      <p class="subtitulo" id="rotulo-semana">Restaurante IFRJ Campus Pinheiral</p>
+    </div>
+
+    <section class="carrossel" id="carrossel" aria-roledescription="carrossel" aria-label="Fotos do cardápio de cada dia">
+      <div class="carrossel-trilho" id="trilho"></div>
+      <button type="button" class="carrossel-seta anterior" id="seta-anterior" aria-label="Dia anterior">&#8249;</button>
+      <button type="button" class="carrossel-seta proxima" id="seta-proxima" aria-label="Próximo dia">&#8250;</button>
+      <div class="carrossel-pontos" id="pontos"></div>
+    </section>
+
+    <section aria-labelledby="titulo-dias">
+      <h2 class="sr-only" id="titulo-dias">Cardápio de cada dia</h2>
+      <div class="grade-dias" id="grade">
+        <p class="carregando-texto">Carregando cardápio…</p>
+      </div>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/inicio.js" defer></script>
+</body>
+</html>

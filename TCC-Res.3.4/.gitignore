@@ -1,0 +1,6 @@
+node_modules/
+.wrangler/
+.dev.vars
+.dados-local/
+*.log
+.DS_Store

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Editar cardápio — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container" style="padding-bottom:140px">
+    <div class="cabecalho-pagina">
+      <h1>Editar cardápio da semana</h1>
+      <p class="subtitulo" id="rotulo-semana">Toque nos pratos para marcar ou desmarcar</p>
+    </div>
+
+    <div class="acoes-linha" style="justify-content:space-between;margin-bottom:18px">
+      <span class="etiqueta" id="estado-alteracoes" hidden>Alterações não salvas</span>
+      <a class="btn btn-secundario btn-pequeno" href="/admin/prato.html">+ Cadastrar prato</a>
+    </div>
+
+    <div class="dias-editor" id="editor"><p class="carregando-texto">Carregando pratos…</p></div>
+  </main>
+
+  <div class="barra-fixa" role="region" aria-label="Salvar cardápio">
+    <div class="barra-fixa-conteudo">
+      <button type="button" class="btn btn-secundario" id="btn-descartar">Descartar</button>
+      <button type="button" class="btn btn-grande" id="btn-salvar">Salvar cardápio da semana</button>
+    </div>
+  </div>
+
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-cardapio.js" defer></script>
+</body>
+</html>

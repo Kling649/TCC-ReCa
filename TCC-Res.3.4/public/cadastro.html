@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cadastro — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="publica">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Criar conta</h1>
+      <p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p>
+    </div>
+
+    <section class="cartao janela-login" aria-labelledby="titulo-cadastro">
+      <h2 class="sr-only" id="titulo-cadastro">Dados da nova conta</h2>
+      <form class="formulario" id="form-cadastro" novalidate>
+        <div class="campo">
+          <span class="rotulo" id="rotulo-perfil">Eu sou</span>
+          <div class="segmentos" role="group" aria-labelledby="rotulo-perfil">
+            <button type="button" class="segmento" data-tipo="aluno" aria-pressed="true">Aluno</button>
+            <button type="button" class="segmento" data-tipo="nutricionista" aria-pressed="false">Nutricionista</button>
+          </div>
+        </div>
+
+        <div class="campo" id="campo-nome">
+          <label for="nome">Nome completo</label>
+          <input id="nome" type="text" autocomplete="name" maxlength="100">
+          <span class="erro-campo" data-erro-para="nome" hidden></span>
+        </div>
+
+        <div class="campo" id="campo-email">
+          <label for="email">E-mail</label>
+          <input id="email" type="email" autocomplete="email" inputmode="email" maxlength="150">
+          <span class="erro-campo" data-erro-para="email" hidden></span>
+        </div>
+
+        <div class="campo" id="campo-matricula">
+          <label for="matricula">Matrícula</label>
+          <input id="matricula" type="text" inputmode="numeric" maxlength="30">
+          <span class="erro-campo" data-erro-para="matricula" hidden></span>
+        </div>
+
+        <div class="campo" id="campo-codigo" hidden>
+          <label for="codigo">Código de autorização da nutricionista</label>
+          <span class="ajuda">Solicite o código à equipe do restaurante.</span>
+          <input id="codigo" type="password" autocomplete="off">
+          <span class="erro-campo" data-erro-para="codigo" hidden></span>
+        </div>
+
+        <div class="linha-form duas">
+          <div class="campo" id="campo-senha">
+            <label for="senha">Senha</label>
+            <span class="ajuda">Mínimo de 6 caracteres.</span>
+            <input id="senha" type="password" autocomplete="new-password">
+            <span class="erro-campo" data-erro-para="senha" hidden></span>
+          </div>
+          <div class="campo" id="campo-senha2">
+            <label for="senha2">Repita a senha</label>
+            <input id="senha2" type="password" autocomplete="new-password">
+            <span class="erro-campo" data-erro-para="senha2" hidden></span>
+          </div>
+        </div>
+
+        <div class="mensagem erro" id="msg-erro" hidden></div>
+        <div class="acoes-form">
+          <button type="submit" class="btn btn-grande btn-bloco" id="btn-cadastrar">Criar conta</button>
+        </div>
+      </form>
+      <p class="rodape-form nota" style="text-align:center;margin-top:16px">Já tem conta? <a href="/login.html">Entrar</a></p>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/auth.js" defer></script>
+</body>
+</html>

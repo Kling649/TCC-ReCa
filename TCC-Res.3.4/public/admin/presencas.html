@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Presenças — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Presenças da semana</h1>
+      <p class="subtitulo">Declarados, efetivados, excedente e faltas por dia</p>
+      <div class="acoes"><a class="btn" href="/admin/contagem.html">Registrar contagem</a></div>
+    </div>
+
+    <div class="coluna-estreita" style="max-width:920px">
+      <nav class="semana-nav" aria-label="Escolher semana">
+        <button type="button" class="btn btn-secundario btn-seta" id="semana-anterior" aria-label="Semana anterior">&#8249;</button>
+        <div class="rotulo-semana" id="rotulo-semana" aria-live="polite">Carregando…</div>
+        <button type="button" class="btn btn-secundario btn-seta" id="semana-proxima" aria-label="Próxima semana">&#8250;</button>
+      </nav>
+
+      <div class="tabela-wrap" style="margin-top:18px">
+        <table class="tabela" id="tabela">
+          <thead>
+            <tr><th>Dia</th><th>Declarados</th><th>Efetivados</th><th>Excedente</th><th>Faltas</th><th>Situação</th></tr>
+          </thead>
+          <tbody id="corpo"><tr><td colspan="6" class="carregando-texto">Carregando…</td></tr></tbody>
+          <tfoot id="rodape"></tfoot>
+        </table>
+      </div>
+
+      <p class="nota" style="margin-top:14px">
+        Excedente e faltas só aparecem depois que o dia é registrado. As médias consideram apenas os dias já registrados
+        (os declarados consideram todos os dias da semana).
+      </p>
+    </div>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-presencas.js" defer></script>
+</body>
+</html>

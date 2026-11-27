@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Formulário de restrição alimentar — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="publica">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Restrição alimentar</h1>
+      <p class="subtitulo">Informe suas restrições para que a cozinha possa cuidar de você</p>
+    </div>
+
+    <section class="cartao coluna-estreita" aria-labelledby="titulo-form">
+      <h2 class="sr-only" id="titulo-form">Formulário de restrição alimentar</h2>
+      <form class="formulario" id="form-restricao" novalidate>
+        <div class="linha-form duas">
+          <div class="campo" id="campo-nome">
+            <label for="nome">Nome completo</label>
+            <input id="nome" type="text" autocomplete="name" maxlength="100" placeholder="Digite seu nome completo">
+            <span class="erro-campo" data-erro-para="nome" hidden></span>
+          </div>
+          <div class="campo" id="campo-matricula">
+            <label for="matricula">Matrícula</label>
+            <input id="matricula" type="text" inputmode="numeric" maxlength="30" placeholder="Digite sua matrícula">
+            <span class="erro-campo" data-erro-para="matricula" hidden></span>
+          </div>
+        </div>
+
+        <div class="campo">
+          <span class="rotulo" id="rotulo-possui">Você possui alguma restrição alimentar?</span>
+          <div class="segmentos" role="group" aria-labelledby="rotulo-possui">
+            <button type="button" class="segmento" data-possui="sim" aria-pressed="false">Sim</button>
+            <button type="button" class="segmento" data-possui="nao" aria-pressed="false">Não</button>
+          </div>
+          <span class="erro-campo" data-erro-para="possui" hidden></span>
+        </div>
+
+        <div id="bloco-restricoes" hidden>
+          <div class="campo">
+            <span class="rotulo">Marque o que se aplica</span>
+            <span class="ajuda">Você pode marcar mais de uma opção.</span>
+            <div class="grade-restricoes" id="opcoes-restricoes">
+              <p class="carregando-texto">Carregando opções…</p>
+            </div>
+            <span class="erro-campo" data-erro-para="restricoes" hidden></span>
+          </div>
+
+          <div class="campo" id="campo-descricao">
+            <label for="descricao">Detalhes (opcional, obrigatório se não marcar nenhuma opção)</label>
+            <textarea id="descricao" maxlength="500" placeholder="Ex.: o que acontece quando você consome o alimento, outra restrição…"></textarea>
+            <span class="ajuda" id="contador-descricao">0 / 500 caracteres</span>
+            <span class="erro-campo" data-erro-para="descricao" hidden></span>
+          </div>
+        </div>
+
+        <div class="acoes-form">
+          <button type="submit" class="btn btn-grande" id="btn-enviar">Enviar formulário</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/formularios.js" defer></script>
+</body>
+</html>

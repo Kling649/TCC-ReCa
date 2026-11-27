@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Comentários — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="publica">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Comentários</h1>
+      <p class="subtitulo">Sua opinião ajuda a melhorar o cardápio</p>
+    </div>
+
+    <div class="grade-2">
+      <section class="cartao" aria-labelledby="titulo-form">
+        <h2 id="titulo-form">Deixe seu comentário</h2>
+        <form class="formulario" id="form-comentario" novalidate>
+          <div class="campo" id="campo-dia">
+            <label for="dia">Dia da refeição</label>
+            <select id="dia" required>
+              <option value="">Selecione o dia…</option>
+            </select>
+            <span class="erro-campo" data-erro-para="dia" hidden></span>
+          </div>
+
+          <div class="campo" id="campo-avaliacao">
+            <span class="rotulo" id="rotulo-avaliacao">Como você avalia a refeição?</span>
+            <div class="chips" role="radiogroup" aria-labelledby="rotulo-avaliacao" id="estrelas-escolha">
+              <button type="button" class="chip" role="radio" aria-checked="false" data-nota="1">★ 1</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" data-nota="2">★★ 2</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" data-nota="3">★★★ 3</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" data-nota="4">★★★★ 4</button>
+              <button type="button" class="chip" role="radio" aria-checked="false" data-nota="5">★★★★★ 5</button>
+            </div>
+            <span class="erro-campo" data-erro-para="avaliacao" hidden></span>
+          </div>
+
+          <div class="campo" id="campo-texto">
+            <label for="texto">Comentário</label>
+            <textarea id="texto" maxlength="1000" placeholder="Conte como foi sua experiência…"></textarea>
+            <span class="ajuda" id="contador-texto">0 / 1000 caracteres</span>
+            <span class="erro-campo" data-erro-para="texto" hidden></span>
+          </div>
+
+          <div class="acoes-form">
+            <button type="submit" class="btn btn-bloco" id="btn-enviar">Enviar comentário</button>
+          </div>
+        </form>
+      </section>
+
+      <section aria-labelledby="titulo-recentes">
+        <div class="cabecalho-faixa" id="titulo-recentes">
+          <span>Comentários recentes</span>
+          <div class="resumo-numeros" id="resumo"></div>
+        </div>
+        <div class="lista-cartoes" id="lista-recentes" style="margin-top:14px"></div>
+        <p class="vazio" id="sem-comentarios" hidden>Nenhum comentário ainda. Seja o primeiro a comentar!</p>
+        <div class="mais-wrap">
+          <button type="button" class="btn btn-secundario" id="btn-ver-mais" hidden>Ver mais comentários</button>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <dialog class="janela" id="janela-comentarios" aria-labelledby="titulo-janela">
+    <div class="janela-cabecalho">
+      <h2 id="titulo-janela">Todos os comentários</h2>
+      <button type="button" class="janela-fechar" id="btn-fechar-janela" aria-label="Fechar">×</button>
+    </div>
+    <div class="janela-corpo">
+      <div class="filtro-dias" id="filtro-dias" role="group" aria-label="Filtrar por dia da semana"></div>
+      <p class="nota" id="contagem-janela"></p>
+      <div class="lista-cartoes" id="lista-todos"></div>
+      <p class="vazio" id="janela-vazia" hidden>Nenhum comentário para este dia.</p>
+      <div class="mais-wrap">
+        <button type="button" class="btn btn-secundario" id="btn-carregar-mais" hidden>Carregar mais</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/comentarios.js" defer></script>
+</body>
+</html>

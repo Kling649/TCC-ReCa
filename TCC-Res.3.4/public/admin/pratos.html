@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Pratos cadastrados — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Pratos cadastrados</h1>
+      <p class="subtitulo">Pratos disponíveis para montar o cardápio</p>
+      <div class="acoes">
+        <a class="btn" href="/admin/prato.html">+ Novo prato</a>
+        <a class="btn btn-secundario" href="/admin/cardapio.html">Montar cardápio</a>
+      </div>
+    </div>
+    <p class="nota" id="contagem" style="text-align:center;margin-bottom:16px"></p>
+    <div class="grade-cartoes" id="lista"><p class="carregando-texto">Carregando pratos…</p></div>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-pratos.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Avisos — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="publica">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Avisos do restaurante</h1>
+      <p class="subtitulo">Comunicados publicados pela nutricionista</p>
+    </div>
+
+    <div class="coluna-estreita">
+      <div class="cartao" id="barra-avisos" hidden>
+        <div class="acoes-linha" style="justify-content:space-between">
+          <span id="resumo-avisos" style="font-weight:600"></span>
+          <button type="button" class="btn btn-pequeno" id="btn-marcar-todos" hidden>Marcar todos como lidos</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="lista-avisos" id="lista-avisos" aria-live="polite" style="margin-top:20px">
+      <p class="carregando-texto">Carregando avisos…</p>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/avisos.js" defer></script>
+</body>
+</html>

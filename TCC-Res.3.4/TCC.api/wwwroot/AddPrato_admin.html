@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastrar prato no cardápio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <nav>
+    <a href="index_admin.html">Cardápio</a><a href="Presenca_admin.html">Presenças</a>
+    <a href="comentarios_admin.html">Comentários</a><a href="formularios_admin.html">Formulários</a>
+    <a href="contato_admin.html">Contato</a><a href="Pratos_admin.html">Pratos</a>
+    <a href="sair.html" class="sair">Sair</a>
+  </nav>
+  <main class="container">
+    <div class="page-header">
+      <h1>Cadastrar prato no cardápio</h1>
+      <p class="subtitulo">Informe o prato, escolha o dia e, se desejar, envie uma foto.</p>
+    </div>
+    <div class="pratowindow">
+      <form id="formPrato">
+        <div class="logline"><label for="pratoNome">Nome do prato:</label><input class="text" id="pratoNome" required maxlength="120" placeholder="Ex.: Strogonoff de frango"></div>
+        <div class="logline"><label for="pratoDia">Dia da semana:</label>
+          <select class="text" id="pratoDia" required>
+            <option value="">Selecione o dia</option>
+            <option>Segunda-feira</option><option>Terça-feira</option><option>Quarta-feira</option><option>Quinta-feira</option><option>Sexta-feira</option>
+          </select>
+        </div>
+        <div class="logline"><label for="pratoDescricao">Descrição:</label><textarea class="textarea" id="pratoDescricao" placeholder="Uma breve descrição do prato"></textarea></div>
+        <div class="logline"><label for="pratoIngredientes">Ingredientes:</label><textarea class="textarea" id="pratoIngredientes" required placeholder="Liste os ingredientes utilizados"></textarea></div>
+        <div class="logline"><label for="pratoModo">Modo de preparo:</label><textarea class="textarea" id="pratoModo" required placeholder="Descreva como o prato é preparado"></textarea></div>
+        <div class="logline"><label for="pratoTempo">Tempo de preparo (minutos):</label><input class="text" id="pratoTempo" type="number" min="0"></div>
+        <div class="logline"><label for="pratoSobremesa">Sobremesa do dia (opcional):</label><input class="text" id="pratoSobremesa" placeholder="Ex.: Banana"></div>
+        <div class="logline"><label for="pratoFoto">Foto do prato (JPG, PNG ou WEBP, até 5 MB):</label><input class="text" id="pratoFoto" type="file" accept="image/jpeg,image/png,image/webp"></div>
+        <img id="previewFotoPrato" class="foto-prato-preview" alt="Prévia da foto selecionada" hidden>
+        <button type="submit" class="admbut">Cadastrar prato no cardápio</button>
+      </form>
+    </div>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>

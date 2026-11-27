@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Cadastrar prato — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1 id="titulo-pagina">Cadastrar prato</h1>
+      <p class="subtitulo">Depois de salvar, você pode incluir o prato em um dia do cardápio.</p>
+    </div>
+
+    <section class="cartao coluna-estreita" aria-labelledby="titulo-pagina">
+      <form class="formulario" id="form-prato" novalidate>
+        <div class="campo" id="campo-nome">
+          <label for="nome">Nome do prato</label>
+          <input id="nome" maxlength="150" placeholder="Ex.: Strogonoff de frango">
+          <span class="erro-campo" data-erro-para="nome" hidden></span>
+        </div>
+
+        <div class="campo" id="campo-descricao">
+          <label for="descricao">Descrição (opcional)</label>
+          <input id="descricao" maxlength="500" placeholder="Uma frase sobre o prato">
+        </div>
+
+        <div class="campo" id="campo-ingredientes">
+          <label for="ingredientes">Ingredientes</label>
+          <textarea id="ingredientes" maxlength="1500" placeholder="Liste os ingredientes"></textarea>
+          <span class="erro-campo" data-erro-para="ingredientes" hidden></span>
+        </div>
+
+        <div class="campo" id="campo-modo">
+          <label for="modo">Modo de preparo</label>
+          <textarea id="modo" maxlength="3000" placeholder="Descreva como o prato é preparado"></textarea>
+          <span class="erro-campo" data-erro-para="modo" hidden></span>
+        </div>
+
+        <div class="linha-form duas">
+          <div class="campo" id="campo-tempo">
+            <label for="tempo">Tempo de preparo (minutos)</label>
+            <input id="tempo" type="number" inputmode="numeric" min="0" max="1440">
+            <span class="erro-campo" data-erro-para="tempo" hidden></span>
+          </div>
+          <div class="campo" id="campo-dia">
+            <label for="dia-cardapio">Incluir no cardápio de (opcional)</label>
+            <select id="dia-cardapio">
+              <option value="">Não incluir agora</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="campo">
+          <span class="rotulo">Foto do prato</span>
+          <span class="ajuda">JPG, PNG ou WEBP, até 5 MB. Se o envio de fotos não estiver configurado, cole um link https:// abaixo.</span>
+          <input id="foto" type="file" accept="image/jpeg,image/png,image/webp">
+          <img id="previa" alt="Prévia da foto escolhida" style="max-height:220px;border-radius:12px;margin-top:8px" hidden>
+          <div class="campo" style="margin-top:8px">
+            <label for="link-foto">Ou link da foto (https://)</label>
+            <input id="link-foto" type="url" placeholder="https://…" maxlength="500">
+            <span class="erro-campo" data-erro-para="foto" hidden></span>
+          </div>
+        </div>
+
+        <div class="mensagem erro" id="msg-erro" hidden></div>
+        <div class="acoes-form">
+          <a class="btn btn-secundario" href="/admin/pratos.html">Voltar</a>
+          <button type="submit" class="btn btn-grande" id="btn-salvar">Salvar prato</button>
+        </div>
+      </form>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-prato.js" defer></script>
+</body>
+</html>

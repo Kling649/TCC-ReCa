@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Comentários — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Cardápio</a>
+    <a href="comentarios.html" class="active">Comentários</a>
+    <a href="formularios.html">Restrições</a>
+    <a href="contato.html">Contato</a>
+    <a href="login.html">Login</a>
+    <a href="sair.html" class="sair">Sair</a>
+  </nav>
+
+  <main class="container">
+
+    <div class="page-header">
+      <h1>Comentários</h1>
+      <p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p>
+    </div>
+
+    <!-- ── FORMULÁRIO DE COMENTÁRIO ──────────── -->
+    <div class="comentario-container">
+      <h2 class="comentario-titulo">Deixe seu comentário</h2>
+
+      <form class="formulario" id="formComentario">
+
+        <label for="diaRefeicao">Dia da refeição</label>
+        <select id="diaRefeicao" required>
+          <option value="">Selecione...</option>
+          <option value="Segunda-feira">Segunda-feira</option>
+          <option value="Terça-feira">Terça-feira</option>
+          <option value="Quarta-feira">Quarta-feira</option>
+          <option value="Quinta-feira">Quinta-feira</option>
+          <option value="Sexta-feira">Sexta-feira</option>
+        </select>
+
+        <label for="avaliacao">Avaliação</label>
+        <select id="avaliacao" required>
+          <option value="5">★★★★★ - Excelente</option>
+          <option value="4">★★★★☆ - Bom</option>
+          <option value="3">★★★☆☆ - Regular</option>
+          <option value="2">★★☆☆☆ - Ruim</option>
+          <option value="1">★☆☆☆☆ - Péssimo</option>
+        </select>
+
+        <label for="textoComentario">Comentário</label>
+        <textarea
+          id="textoComentario"
+          placeholder="Conte como foi sua experiência..."
+          required
+        ></textarea>
+
+        <button type="submit">Enviar comentário</button>
+
+      </form>
+    </div>
+
+    <!-- ── LISTAGEM DE COMENTÁRIOS ANTERIORES ── -->
+    <div class="comentarios-lista-header">
+      <span>Comentários dos clientes</span>
+    </div>
+
+    <div id="listaComentarios" class="comentarios-lista">
+      <!-- Comentários são renderizados aqui pelo script.js -->
+      <!-- TODO: futuramente serão carregados do banco de dados -->
+    </div>
+
+    <p id="semComentarios" class="sem-comentarios" style="display:none;">
+      Nenhum comentário ainda. Seja o primeiro a comentar!
+    </p>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

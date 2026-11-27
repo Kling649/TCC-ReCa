@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Cadastro — Restaurante IFRJ Campus Pinheiral</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<nav><a href="index.html">Cardápio</a><a href="comentarios.html">Comentários</a><a href="formularios.html">Formulários</a><a href="contato.html">Contato</a><a href="login.html">Login</a><a href="sair.html" class="sair">Sair</a></nav>
+<main class="container"><div class="page-header"><h1>Cadastro</h1><p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p></div>
+<div class="logwindow"><h1>Crie sua conta</h1>
+<form id="formCadastro">
+<div class="logline"><label for="tipoUsuario">Perfil:</label><select id="tipoUsuario"><option value="aluno">Aluno</option><option value="nutricionista">Nutricionista</option></select></div>
+<div class="logline"><label for="cadNome">Nome:</label><input id="cadNome" type="text" required></div>
+<div class="logline"><label for="cadEmail">Email:</label><input id="cadEmail" type="email" required></div>
+<div class="logline" id="campoMatricula"><label for="cadMatricula">Matrícula:</label><input id="cadMatricula" type="text"></div>
+<div class="logline"><label for="cadSenha">Senha:</label><input id="cadSenha" type="password" minlength="6" required></div>
+<button type="submit">Cadastrar</button>
+</form></div></main>
+<script src="script.js"></script></body></html>

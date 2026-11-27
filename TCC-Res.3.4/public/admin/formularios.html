@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Restrições alimentares — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Restrições alimentares</h1>
+      <p class="subtitulo">Um registro por aluno: sempre a resposta mais recente</p>
+    </div>
+
+    <section class="indicadores" id="resumo" aria-label="Resumo das restrições">
+      <p class="carregando-texto">Carregando…</p>
+    </section>
+
+    <section class="secao" aria-labelledby="t-filtro">
+      <h2 class="secao-titulo" id="t-filtro">Alunos por restrição</h2>
+      <div class="filtro-dias" id="filtro" role="group" aria-label="Filtrar por restrição"></div>
+      <p class="nota" id="contagem" style="margin-top:10px"></p>
+      <div class="grade-cartoes" id="lista" style="margin-top:12px"></div>
+      <p class="vazio" id="vazio" hidden>Nenhum aluno para este filtro.</p>
+      <div class="mais-wrap">
+        <button type="button" class="btn btn-secundario" id="btn-mais" hidden>Carregar mais</button>
+      </div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-nova">
+      <div class="cartao coluna-estreita">
+        <h2 id="t-nova">Cadastrar um novo tipo de restrição</h2>
+        <p class="nota" style="margin-bottom:12px">Ele aparece para os alunos no formulário, na categoria escolhida.</p>
+        <form class="formulario" id="form-nova" novalidate>
+          <div class="linha-form duas">
+            <div class="campo" id="campo-nome-nova">
+              <label for="nome-nova">Nome</label>
+              <input id="nome-nova" maxlength="60" placeholder="Ex.: Milho">
+              <span class="erro-campo" data-erro-para="nome-nova" hidden></span>
+            </div>
+            <div class="campo">
+              <label for="categoria-nova">Categoria</label>
+              <select id="categoria-nova">
+                <option>Alergia</option><option>Intolerância</option><option>Preferência</option><option>Médica</option><option>Outra</option>
+              </select>
+            </div>
+          </div>
+          <div class="campo">
+            <label for="descricao-nova">Descrição (opcional)</label>
+            <input id="descricao-nova" maxlength="255" placeholder="Ex.: alergia ao milho e derivados">
+          </div>
+          <div class="acoes-form"><button type="submit" class="btn" id="btn-nova">Cadastrar restrição</button></div>
+        </form>
+      </div>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-formularios.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{
+  // Configuração do Cloudflare Workers — TCC-Res 3.4
+  // Documentação: https://developers.cloudflare.com/workers/wrangler/configuration/
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "tcc-restaurante-ifrj",
+  "main": "src/index.js",
+  "compatibility_date": "2025-09-01",
+
+  // Arquivos do site (HTML, CSS, JS, imagens). Os caminhos /api/* e /uploads/*
+  // passam primeiro pelo Worker; o resto é entregue direto como arquivo estático.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": ["/api/*", "/uploads/*"]
+  },
+
+  // Banco D1 (SQLite). Crie com:  npx wrangler d1 create recadb
+  // e copie o "database_id" retornado para o campo abaixo.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "recadb",
+      "database_id": "2e5b6d16-6f8a-407e-bb6f-8addd2030155",
+      "migrations_dir": "migrations"
+    }
+  ]
+
+  // Opcional — upload de fotos dos pratos. Depois de criar o bucket com
+  //   npx wrangler r2 bucket create recadb-fotos
+  // remova as barras da linha abaixo (e a vírgula do bloco anterior, se preciso):
+  // "r2_buckets": [{ "binding": "FOTOS", "bucket_name": "recadb-fotos" }]
+}

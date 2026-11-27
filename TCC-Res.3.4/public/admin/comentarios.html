@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Comentários recebidos — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Comentários recebidos</h1>
+      <p class="subtitulo">Acompanhe a avaliação de cada dia da semana</p>
+    </div>
+
+    <section class="indicadores" id="resumo-geral" aria-label="Resumo dos comentários">
+      <p class="carregando-texto">Carregando…</p>
+    </section>
+
+    <section class="secao" aria-labelledby="t-dias">
+      <h2 class="secao-titulo" id="t-dias">Avaliação por dia</h2>
+      <div class="indicadores" id="resumo-dias"></div>
+    </section>
+
+    <section class="secao" aria-labelledby="t-lista">
+      <h2 class="secao-titulo" id="t-lista">Todos os comentários</h2>
+      <div class="filtro-dias" id="filtro" role="group" aria-label="Filtrar por dia da semana" style="margin-bottom:12px"></div>
+      <p class="nota" id="contagem"></p>
+      <div class="lista-cartoes" id="lista" style="margin-top:12px"></div>
+      <p class="vazio" id="vazio" hidden>Nenhum comentário para este filtro.</p>
+      <div class="mais-wrap">
+        <button type="button" class="btn btn-secundario" id="btn-mais" hidden>Carregar mais</button>
+      </div>
+    </section>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-comentarios.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,3 @@
+# Copie este arquivo para .dev.vars (usado pelo "npm run dev" e pelo "npm run dev:local").
+# Escolha um código forte e mantenha-o só com a equipe responsável.
+TCC_CODIGO_NUTRICIONISTA=TROQUE-ESTE-CODIGO-PRIVADO

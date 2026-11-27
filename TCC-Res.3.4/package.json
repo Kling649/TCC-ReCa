@@ -1,0 +1,21 @@
+{
+  "name": "tcc-res-3-4",
+  "version": "3.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Sistema do Restaurante IFRJ Campus Pinheiral: Cloudflare Workers + D1 (SQLite)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrar:local": "wrangler d1 migrations apply recadb --local",
+    "db:migrar:remoto": "wrangler d1 migrations apply recadb --remote",
+    "dev:local": "node tests/servidor-local.mjs",
+    "test": "node --test tests/api.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

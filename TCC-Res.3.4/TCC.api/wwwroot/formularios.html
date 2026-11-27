@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulários — Restaurante IFRJ Campus Pinheiral</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+    <a href="index.html">Cardápio</a>
+    <a href="comentarios.html">Comentários</a>
+    <a href="formularios.html" class="active">Formulários</a>
+    <a href="contato.html">Contato</a>
+    <a href="avisos.html" class="nav-avisos">Avisos <span data-aviso-badge class="aviso-badge" style="display:none;"></span></a>
+    <a href="login.html">Login</a>
+    <a href="sair.html" class="sair">Sair</a>
+  </nav>
+
+  <main class="container">
+   
+
+  <div class="page-header">
+    <h1>Formulários</h1>
+    <p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p>
+  </div>
+
+  <div class="formulario-container">
+
+    <h2>Restrição Alimentar</h2>
+
+    <p>
+      Informe seus dados e registre possíveis restrições alimentares.
+    </p>
+
+    <form class="formulario" id="formRestricao">
+
+      <label for="nome">Nome completo:</label>
+
+      <input
+        type="text"
+        id="nome"
+        placeholder="Digite seu nome completo"
+        required
+      >
+
+      <label for="matricula">Matrícula:</label>
+
+      <input
+        type="text"
+        id="matricula"
+        placeholder="Digite sua matrícula"
+        required
+      >
+
+      <label for="restricao">
+        Você possui alguma restrição alimentar?
+      </label>
+
+      <select id="restricao" required>
+        <option value="">Selecione uma opção</option>
+        <option value="sim">Sim</option>
+        <option value="nao">Não</option>
+      </select>
+
+      <div id="camposRestricao">
+
+  <label for="tipoRestricao">
+    Tipo de restrição:
+  </label>
+
+  <select id="tipoRestricao">
+    <option value="">Selecione uma opção</option>
+    <option value="alergia">Alergia</option>
+    <option value="intolerancia">Intolerância</option>
+    <option value="medica">Restrição médica</option>
+    <option value="outra">Outra</option>
+  </select>
+
+  <label for="descricao">
+    Descreva sua restrição:
+  </label>
+
+  <textarea
+    id="descricao"
+    placeholder="Descreva sua restrição alimentar..."
+  ></textarea>
+
+</div>
+
+      <button type="submit">
+        Enviar formulário
+      </button>
+
+    </form>
+
+  </div>
+
+</main>
+  
+
+  <script src="script.js"></script>
+</body>
+</html>

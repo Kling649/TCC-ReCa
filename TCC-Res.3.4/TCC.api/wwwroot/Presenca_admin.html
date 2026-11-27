@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Presenças — Restaurante IFRJ Campus Pinheiral</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <nav>
+    <a href="index_admin.html">Cardápio</a>
+    <a href="Presenca_admin.html">Presenças</a>
+    <a href="comentarios_admin.html">Comentários</a>
+    <a href="formularios_admin.html">Formulários</a>
+    <a href="contato_admin.html">Contato</a>
+    <a href="Pratos_admin.html">Pratos</a>
+    <a href="avisos_admin.html">Avisos</a>
+    <a href="login.html">Login</a>
+    <a href="sair.html" class="sair">Sair</a>
+  </nav>
+
+  <main class="container">
+    <div class="page-header">
+      <h1>Presenças no Restaurante</h1>
+      <p class="subtitulo">Restaurante IFRJ Campus Pinheiral</p>
+      <a href="registro_admin.html" class="admbut butcender">Inserir Presenças Registradas</a>
+    </div>
+
+    <div id="presencas-loading" class="text-center mt-4">Carregando dados...</div>
+    <div id="presencas-conteudo" style="display:none;">
+      <table id="tabela-presencas">
+        <tr>
+          <th></th><th>SEG</th><th>TER</th><th>QUA</th><th>QUI</th><th>SEX</th>
+        </tr>
+        <tr><td>AGENDADAS</td><td data-dia="0"></td><td data-dia="1"></td><td data-dia="2"></td><td data-dia="3"></td><td data-dia="4"></td></tr>
+        <tr><td>REGISTRADAS</td><td data-dia="0"></td><td data-dia="1"></td><td data-dia="2"></td><td data-dia="3"></td><td data-dia="4"></td></tr>
+        <tr><td>DIFERENÇA</td><td data-dia="0"></td><td data-dia="1"></td><td data-dia="2"></td><td data-dia="3"></td><td data-dia="4"></td></tr>
+      </table>
+
+      <table id="tabela-medias">
+        <tr><th>MÉDIAS</th><th>REGISTRADAS</th><th>AGENDADAS</th><th>DIFERENÇA</th></tr>
+        <tr><td></td><td id="media-registradas"></td><td id="media-agendadas"></td><td id="media-diferenca"></td></tr>
+      </table>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

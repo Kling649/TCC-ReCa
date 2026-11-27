@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Contagem de presenças — Área da nutricionista</title>
+  <link rel="stylesheet" href="/css/estilo.css">
+</head>
+<body class="carregando" data-area="admin">
+  <main class="container">
+    <div class="cabecalho-pagina">
+      <h1>Contagem de presenças</h1>
+      <p class="subtitulo">Escolha o dia e informe quantas pessoas almoçaram</p>
+    </div>
+
+    <div class="coluna-estreita" style="max-width:640px">
+      <nav class="semana-nav" aria-label="Escolher semana">
+        <button type="button" class="btn btn-secundario btn-seta" id="semana-anterior" aria-label="Semana anterior">&#8249;</button>
+        <div class="rotulo-semana" id="rotulo-semana" aria-live="polite">Carregando…</div>
+        <button type="button" class="btn btn-secundario btn-seta" id="semana-proxima" aria-label="Próxima semana">&#8250;</button>
+      </nav>
+
+      <div class="dias-grade" id="dias" role="group" aria-label="Escolha o dia da semana" style="margin:16px 0"></div>
+
+      <section class="cartao painel-dia" aria-labelledby="titulo-dia" id="painel" hidden>
+        <h2 id="titulo-dia" style="text-align:center"></h2>
+
+        <div class="declarados-destaque">
+          <div class="numero" id="declarados">0</div>
+          <div class="legenda">Declarados (agendaram presença)</div>
+        </div>
+
+        <div class="contador-efetivados">
+          <div class="rotulo">Efetivados — quantos almoçaram de fato</div>
+          <div class="contador">
+            <button type="button" class="btn btn-passo" id="menos" aria-label="Diminuir uma pessoa">&minus;</button>
+            <input id="efetivados" type="number" inputmode="numeric" min="0" max="5000" step="1" aria-label="Quantidade de efetivados" aria-describedby="erro-contagem previa">
+            <button type="button" class="btn btn-passo" id="mais" aria-label="Aumentar uma pessoa">+</button>
+          </div>
+          <div class="erro-texto" id="erro-contagem" role="alert"></div>
+          <div class="atalhos">
+            <button type="button" class="chip" data-somar="5">+5</button>
+            <button type="button" class="chip" data-somar="10">+10</button>
+            <button type="button" class="chip" id="igualar">Igual aos declarados</button>
+            <button type="button" class="chip" id="zerar">Zerar</button>
+          </div>
+          <p class="previa" id="previa" aria-live="polite"></p>
+        </div>
+
+        <div class="acoes-linha" style="flex-direction:column;align-items:stretch">
+          <button type="button" class="btn btn-grande btn-bloco" id="salvar">Salvar contagem</button>
+          <button type="button" class="btn btn-secundario btn-bloco" id="salvar-proximo">Salvar e ir para o próximo dia →</button>
+        </div>
+
+        <div class="resumo-dia-grid" id="resumo-dia" aria-label="Resumo do dia"></div>
+      </section>
+
+      <p class="nota" style="text-align:center;margin-top:16px">
+        Declarados = alunos que agendaram pelo cardápio. Efetivados = quantos realmente almoçaram.
+        O excedente e as faltas são calculados sozinhos.
+      </p>
+    </div>
+  </main>
+  <script src="/js/comum.js" defer></script>
+  <script src="/js/admin-contagem.js" defer></script>
+</body>
+</html>
